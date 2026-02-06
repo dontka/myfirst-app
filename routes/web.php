@@ -16,3 +16,7 @@ Route::middleware([
     })->name('dashboard');
 });
 
+Route::get('/blog', function () {
+    return view('blog.index');
+})->name('blog.index');
+
