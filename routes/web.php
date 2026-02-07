@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
@@ -19,4 +19,9 @@ Route::middleware([
 Route::get('/blog', function () {
     return view('blog.index');
 })->name('blog.index');
+
+Route::get('/', function () {
+    return view('blog.home');
+})->name('blog.home');
+
 
